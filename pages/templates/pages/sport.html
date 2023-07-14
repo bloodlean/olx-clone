@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Sport
+{% endblock title %}
+
+{% block content %}
+
+        <p>
+            Спорт
+        </p>
+
+    {% for sport in sport %}
+        <div class="transport-products">
+            <div class="product">
+                <h1>{{ sport.title }}</h1>
+                <a href="{% url 'sport_detail' sport.pk %}">
+                    <img src="{{ sport.image.url }}" alt="">
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}
