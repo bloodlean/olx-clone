@@ -294,3 +294,8 @@ input[type=submit], a.button {
     font-size: 17px;
     text-align: left;
 }
+
+.back-to-home {
+    text-align: center;
+    font-size: 20px;
+}
