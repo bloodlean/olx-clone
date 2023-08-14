@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
@@ -10,7 +11,7 @@ body {
 
 header {
     background-color: #333;
-    padding: 30px;
+    padding: 15px;
 }
 
 .page {
@@ -18,18 +19,35 @@ header {
 }
 
 .logo img{
+    margin-left: 60px;
+    padding-top: 10px;
     width: 71px;
     height: 41px;
-    margin-left: 60px;
 }
 
+
+
 .category {
+    color: white ;
+    width: 500px;
+    margin-left: 490px;
     text-align: center;
     font-size: 70px;
     margin-top: 60px;
     text-transform: uppercase;
     padding: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: #308cd7;
+    border-radius: 20px;
+}
+
+.category {
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 60px;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: rgb(60, 129, 208);
     border-radius: 20px;
 }
 
@@ -54,7 +72,7 @@ footer {
     color: #fff;
     padding: 15px;
     text-align: center;
-    margin-top: 223px;
+    margin-top: 217px;
 }
 
 a {
@@ -64,7 +82,7 @@ a {
 }
 
 a:hover  {
-    color:darkorange;
+    color: #308cd7;
 }
 
 p {
@@ -147,3 +165,132 @@ p {
     font-size: 36px;
 }
 
+.content {
+    padding-left: 90px;
+}
+
+.des {
+    text-align: left;
+    font-size: 20px;
+}
+
+.login {
+    font-size: 40px;
+}
+
+form {
+    overflow:auto;
+}
+
+form p {
+    width:100%;
+    overflow:auto;
+}
+
+label {
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px;
+    font-size: 25px;
+}
+
+input, textarea {
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#efefef;
+    border:0;
+    padding:6px 10px;
+    font-size:14px;
+}
+
+input[type=submit], a.button {
+    font-weight:bold;
+    background:#333;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase;
+}
+
+.errorlist {
+    font-size: 20px;
+    color:#ff0000;
+    background: none;
+    text-align: left;
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.helptext {
+    margin:0 0 20px 0;
+    color:#aaa;
+    clear:both;
+    float:left;
+    font-size:13px;
+}
+
+.content1 {
+    font-size: 60px;
+    text-align: center;
+    padding-top: 134px;
+}
+
+.login1 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.ww {
+    text-align: left;
+    font-size: 30px;
+}
+
+.logout-desc {
+    padding-top: 68px;
+}
+
+.user {
+    color: white;
+    text-align: center;
+    margin-left: 1150px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.user1 a{
+    color: white;
+    text-align: center;
+}
+
+.user1 a:hover{
+    color:#308cd7
+}
+
+.logo, .user {
+    display: inline-block;
+}
+
+.password-change {
+    text-align: left;
+}
+
+
+.content3 {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.password-change1 {
+    text-align: center;
+    margin-top: 91px;
+}
+
+
+
+.fyp {
+    font-size: 17px;
+    text-align: left;
+}

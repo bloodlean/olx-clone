@@ -14,8 +14,22 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="{% url 'home' %}"><img src="{% static 'images/png/icon.png' %}" alt="icon"></a>
+        <div class="header">
+            <div class="logo"> 
+                <a href="{% url 'home' %}"><img src="{% static 'images/png/icon.png' %}" alt=""></a>
+                <span class="user">
+                    {% if request.user.is_authenticated %}
+                        Hello, {{ request.user.first_name|default:request.user.username }}
+                        <div class="user1">
+                            <a href="{% url 'logout' %}">Log out</a>
+                        </div>
+                    {% else %}
+                        <div class="user1">
+                            <a href="{% url 'login' %}">Log in</a>
+                        </div>
+                    {% endif %}
+                </span>
+            </div>
         </div>
     </header>
     {% block content %}
@@ -26,7 +40,6 @@
         <!-- Navigation bar -->
         {% include 'includes/navbar.html' %}
         <!-- End of nav bar -->
-
     </div>
     {% endblock %}
     <footer>

@@ -5,6 +5,8 @@ from .models import Furniture
 from .models import Cloth
 from .models import Sport
 from django.http import Http404
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'base.html')
@@ -20,6 +22,7 @@ def electronics(request):
         context
     )
 
+@login_required(redirect_field_name='login')
 def sale_detail(request, pk):
     try:
         product = Product.objects.get(id=pk)
@@ -37,6 +40,7 @@ def transport(request):
     }
     return render(request, 'pages/transport.html', context)
 
+@login_required(redirect_field_name='login')
 def transport_detail(request, pk):
     try:
         transport = Transport.objects.get(id=pk)
@@ -56,6 +60,7 @@ def furniture(request):
     }
     return render(request, 'pages/furniture.html', context)
 
+@login_required(redirect_field_name='login')
 def furniture_detail(request, pk):
     try:
         furnitures = Furniture.objects.get(id=pk)
@@ -75,6 +80,7 @@ def clothes(request):
     }
     return render(request, 'pages/clothes.html', context)
 
+@login_required(redirect_field_name='login')
 def clothes_detail(request, pk):
     try:
         cloth = Cloth.objects.get(id=pk)
@@ -93,6 +99,7 @@ def sport(request):
     }
     return render(request, 'pages/sport.html', context)
 
+@login_required(redirect_field_name='login')
 def sport_detail(request, pk):
     try:
         sports = Sport.objects.get(id=pk)
